@@ -13,10 +13,10 @@ Add REST methods on the backend to allow  setting and reading of custom ids by t
 Keep in mind the writing and reading permissions.
 
 # Ticket 4:
-`getShiftsByFacility()` in order to fetch shifts by facility-specific agent ids
+Please change the `getShiftsByFacility()` in order to fetch shifts by facility-specific agent ids
 
 # Ticket 5:
-please change the `generateReport()` in order to show both internal and facility-specific Ids
+Please change the `generateReport()` in order to show both internal and facility-specific Ids
 Sorting order should be by internal ids
 
 
