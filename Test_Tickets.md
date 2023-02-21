@@ -10,10 +10,10 @@ Check that the Facilities, Agents, and Shifts tables have all relations in place
  
 # Ticket 3: 
 Add REST methods on the backend to allow  setting and reading of a custom ids by the facility. 
-Keep in mind the permissions
+Keep in mind the writing and reading permissions.
 
-getShiftsByFacility() should be changed to fetch shifts by facility-specific agent ids 
-generateReport() should be sorted by internal ids but show both internal and facility-specific ones 
+`getShiftsByFacility()` should be changed to fetch shifts by facility-specific agent ids 
+`generateReport()` should be sorted by internal ids but show both internal and facility-specific ones 
 
 
 
