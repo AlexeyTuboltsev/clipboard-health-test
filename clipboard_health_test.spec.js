@@ -10,6 +10,13 @@ const mockSettings = {
 
 const createDigestMock = jest.fn((data) => 'mock_digest_result')
 
+//there are cases that are not covered in the code, like
+// event = null, event = {}, event = ""
+// event.partitionKey = null, {}, "", etc
+// Depending on design, a general normalization step should be added either at the beginning of the function
+// or before it. It should be tested separately though
+
+
 test('event with partitionKey', () => {
   const eventWithPartitionKey_object = { a: 'someData', b: 25, partitionKey: { zz: 'foo', 45: 'bar' } }
   const eventWithPartitionKey_number = { a: 'someData', b: 25, partitionKey: 1 }
@@ -61,10 +68,12 @@ test('partition key hits max length', () => {
 })
 
 test('no event', () => {
+  //this should be a fuzzy test too
+  //at least event = null, event = {}, event = "" should be covered and accounted for in the code.
 
-  const eventWithPartitionKey = undefined
+  const event = undefined
 
-  const result = deterministicPartitionKey(mockSettings,createDigestMock, eventWithPartitionKey)
+  const result = deterministicPartitionKey(mockSettings,createDigestMock, event)
 
   expect(result).toEqual(mockSettings.TRIVIAL_PARTITION_KEY)
 })
