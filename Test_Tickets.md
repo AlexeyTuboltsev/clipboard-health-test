@@ -9,11 +9,15 @@ Write database migrations to add fields for custom agent ID
 Check that the Facilities, Agents, and Shifts tables have all relations in place
  
 # Ticket 3: 
-Add REST methods on the backend to allow  setting and reading of a custom ids by the facility. 
+Add REST methods on the backend to allow  setting and reading of custom ids by the facility.
 Keep in mind the writing and reading permissions.
 
-`getShiftsByFacility()` should be changed to fetch shifts by facility-specific agent ids 
-`generateReport()` should be sorted by internal ids but show both internal and facility-specific ones 
+# Ticket 4:
+`getShiftsByFacility()` in order to fetch shifts by facility-specific agent ids
+
+# Ticket 5:
+please change the `generateReport()` in order to show both internal and facility-specific Ids
+Sorting order should be by internal ids
 
 
 
